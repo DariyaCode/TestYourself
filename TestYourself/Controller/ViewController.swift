@@ -15,22 +15,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     
-    let quiz = ["HTML is ...","CSS is ...","Obj-c is ...","Java is ...","Swift us ...","Kotlin is ...","Flutter is ...","React Native is ..."]
-    var questionNumber = 0
+    
+    var quizBrain = QuizBrain()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UpdateUI()
+        updateUI()
     }
     
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        questionNumber += 1
-        UpdateUI()
+        
+        let userAnswer = sender.currentTitle!
+        
+        let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
+        
+        if userGotItRight {
+            sender.backgroundColor = UIColor.green
+        } else {
+            sender.backgroundColor = UIColor.red
+        }
+        
+        quizBrain.nextQuestion()
+        
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
     }
     
-    func UpdateUI () {
-        questionLabel.text = quiz[questionNumber]
+    @objc func updateUI () {
+        questionLabel.text = quizBrain.getQuestionText()
+        progressBar.progress = quizBrain.getProgress()
+        scoreLabel.text = "Score: \(quizBrain.getScore())"
+        
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
     }
 
 
