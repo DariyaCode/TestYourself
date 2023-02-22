@@ -13,6 +13,8 @@
 		1908BDCC29A4E498009A407D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1908BDCA29A4E498009A407D /* Main.storyboard */; };
 		1908BDCE29A4E49A009A407D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1908BDCD29A4E49A009A407D /* Assets.xcassets */; };
 		1908BDD129A4E49A009A407D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1908BDCF29A4E49A009A407D /* LaunchScreen.storyboard */; };
+		1908BDDC29A50296009A407D /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1908BDDB29A50296009A407D /* Questions.swift */; };
+		19DAD75629A5CA8500A32FCB /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DAD75529A5CA8500A32FCB /* QuizBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1908BDCD29A4E49A009A407D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1908BDD029A4E49A009A407D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1908BDD229A4E49A009A407D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1908BDDB29A50296009A407D /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		19DAD75529A5CA8500A32FCB /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		1908BDC329A4E498009A407D /* TestYourself */ = {
 			isa = PBXGroup;
 			children = (
+				1908BDDD29A502A6009A407D /* Model */,
 				1908BDC429A4E498009A407D /* AppDelegate.swift */,
 				1908BDC629A4E498009A407D /* SceneDelegate.swift */,
 				1908BDD929A4EDE3009A407D /* Controller */,
@@ -81,6 +86,15 @@
 				1908BDC829A4E498009A407D /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		1908BDDD29A502A6009A407D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1908BDDB29A50296009A407D /* Questions.swift */,
+				19DAD75529A5CA8500A32FCB /* QuizBrain.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DAD75629A5CA8500A32FCB /* QuizBrain.swift in Sources */,
 				1908BDC929A4E498009A407D /* ViewController.swift in Sources */,
+				1908BDDC29A50296009A407D /* Questions.swift in Sources */,
 				1908BDC529A4E498009A407D /* AppDelegate.swift in Sources */,
 				1908BDC729A4E498009A407D /* SceneDelegate.swift in Sources */,
 			);
